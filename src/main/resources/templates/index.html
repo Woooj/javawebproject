@@ -1,21 +1,26 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="webjars">
-        function doAjax() {
+    <title>Hello jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
             $.ajax({
-                url : 'main',
-                type: 'GET',
-                dataType: 'json',
-                contentType: 'application/json',
-                mimeType: 'application/json'
+                url: "http://localhost:8080/main",
+                type: "GET",
+                contentType : "application/json",
+                datatype: 'json'
+            }).then(function(data) {
+                $('.content').append(data.info);
             });
-        }
+        });
+        //# sourceMappingURL=https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
     </script>
 </head>
+
 <body>
-<button onclick="doAjax()">Load info</button>
+<div>
+    <p class="content"></p>
+</div>
 </body>
 </html>
