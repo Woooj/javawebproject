@@ -14,7 +14,7 @@ public class MainController {
 
     @Autowired
     InfoMapper infoMapper;
-
+// ищу только по id = 1, так как при запуске проекта срабатывает sql скрипт, который добавляет в бд 1 строчку "Hello World"
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<String> main() {
