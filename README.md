@@ -1,10 +1,7 @@
 # simplewebproject
-После того, как скачали проект, запустите schema.sql файл(src/resources), чтобы создать бд.
-Запускайте Application.java
-После запуска сервера заходим по адресу : localhost:8080/
-Чтобы изменить данные в файле GreetingController изменяем код :
-Info info = new Info();
-            info.setInfo("Hello Adik");
-            infoMapper.insert(info);
-            Вместо "Hello Adik" пишем что-то другое.
-     
+1. Компилируем Application.java
+2. Открываем в браузере "localhost:8080/"
+   Всё должно прекрасно работать
+3. Если хотите изменить данные в базе данных, измените в файле "schema.sql" в строчке 
+"INSERT INTO datatable(info) VALUES ('Hello World' );"
+значение "Hello World" на что-нибудь другое и перезапустите проект.
